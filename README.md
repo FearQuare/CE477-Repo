@@ -1,4 +1,4 @@
-# CE477-Repo
+# CE477 Repository
 This is a repository contains what we assigned by our lecturer. 
 ## Who we are? 
 We are: 
