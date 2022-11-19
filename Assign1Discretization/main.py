@@ -21,19 +21,19 @@ plt.ylabel("Frequency")
 plt.show()
 
 
-
-c_2=csr_matrix(new_2)
-a_2 = c_2.toarray()
-d_2=c_2.todok()
-c=csr_matrix(new)
-a = c.toarray()
-d=c.todok()
-myDictionary=dict(d_2.items())
-keys=myDictionary.keys()
-values=myDictionary.values()
-xaxis=list(c.data)
-yaxis=list(data['math score'])
-xaxis2=list(c_2.data)
+#learned something did not used
+#c_2=csr_matrix(new_2)
+#a_2 = c_2.toarray()
+#d_2=c_2.todok()
+#c=csr_matrix(new)
+#a = c.toarray()
+#d=c.todok()
+#myDictionary=dict(d_2.items())
+#keys=myDictionary.keys()
+#values=myDictionary.values()
+#xaxis=list(c.data)
+#yaxis=list(data['math score'])
+#xaxis2=list(c_2.data)
 
 
 
