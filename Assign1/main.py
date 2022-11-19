@@ -3,16 +3,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 data = pd.read_csv("/Users/yarenkarabacak/Desktop/exams.csv")
-#plt.boxplot(data['math score'])
-#plt.title("BoxPlot of Math Score")
+plt.boxplot(data['math score'])
+plt.title("BoxPlot of Math Score")
 
-#plt.boxplot(data['reading score'])
-#plt.title("BoxPlot of Reading Score")
+plt.boxplot(data['reading score'])
+plt.title("BoxPlot of Reading Score")
 
-#plt.boxplot(data['writing score'])
-#plt.title("BoxPlot of Writing Score")
+plt.boxplot(data['writing score'])
+plt.title("BoxPlot of Writing Score")
 
-#plt.boxplot(data['writing score'],data['math score'],data ['reading score'])3
+plt.boxplot(data['writing score'],data['math score'],data ['reading score'])3
 
 plt.rcParams["figure.autolayout"] = True
 
