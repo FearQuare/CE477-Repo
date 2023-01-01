@@ -1,0 +1,41 @@
+pip install apyori 
+
+import pandas as pd
+import numpy as np
+from mlxtend.frequent_patterns import apriori, association_rules
+
+data = pd.read_csv('exam.csv')
+data.head()
+
+data.columns
+#to see the columns of the data set
+
+data.shape
+
+data.isnull().values.any()
+
+data.gender.unique()
+
+a = (data[data['race/ethnicity']=="a"]
+     .groupby(['lunch', 'test preparation course'])['reading score']
+     .sum().unstack().reset_index().fillna(0)
+     .set_index('lunch'))
+     
+ def hot_encode(x): 
+    if(x<= 0): 
+        return 0
+    if(x>= 1): 
+        return 1
+ basket_encoded = a.applymap(hot_encode) 
+a = basket_encoded 
+
+frq_items = apriori(a, min_support = 0.01, use_colnames = True) 
+
+
+print(frq_items)
+
+# Generate the association rules
+rules = association_rules(frq_items, metric ="lift", min_threshold = 1) 
+
+# Sort the rules by confidence and lift
+rules = rules.sort_values(['confidence', 'lift'], ascending =[False, False])
